@@ -1,0 +1,3 @@
+<gs:getAsesorRequest xmlns:gs="http://spring.io/guides/gs-producing-web-service">
+    <gs:name>Manuel</gs:name>
+</gs:getAsesorRequest>

@@ -1,0 +1,60 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="getAsesorRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getAsesorResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="asesor" type="tns:asesor"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="createAsesorRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="asesor" type="tns:asesor"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="updateAsesorRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="asesor" type="tns:asesor"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="deleteAsesorRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="codigo" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="asesor">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="codigo" type="xs:int"/>
+            <xs:element name="correo" type="xs:string"/>
+            <xs:element name="sede" type="tns:sede"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="sede">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="codigo" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
